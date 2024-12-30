@@ -1,25 +1,23 @@
 #include <stdio.h>
-int main(int argc, char const *argv[])
-{
+int main(){
     int year;
-    printf("Enter the year\n");
+    printf("Enter the year: ");
     scanf("%d", &year);
     if (year % 4 == 0){
-        if (year % 100 == 0){
-        if(year%400 == 0){
-            printf("The year is leap");
+        if(year%100==0){
+            if(year%400==0){
+                printf("%d is leap year", year);
+            }
+            else{
+                printf("%d is not leap", year);
+            }
         }
         else{
-            printf("The year is not leap");
-        }
-        }
-        else{
-            printf("The year is leap");
+            printf("%d is leap", year);
         }
     }
     else{
-        printf("The year is not leap..");
+        printf("%d is not leap", year);
     }
     return 0;
 }
-
